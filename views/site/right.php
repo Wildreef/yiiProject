@@ -60,4 +60,24 @@
 
         </aside>
     </div>
+
+    <aside class="border pos-padding widget-search">
+
+        <?php $form = \yii\widgets\ActiveForm::begin([
+
+            'method' => 'get',
+
+            'action' => Url::to(['site/search']),
+
+            'options' => ['class' => 'search-form', 'role' => 'form']]) ?>
+
+        <?php $searchForm = new \app\models\SearchForm() ?>
+
+        <?= $form->field($searchForm, 'text')->textInput(['class' => 'form-control serch', 'placeholder' => 'Search'])->label(false) ?>
+
+        <button class="btn-serch" type="submit"><i class="fa fa-search"></i></button>
+
+        <?php \yii\widgets\ActiveForm::end() ?>
+
+    </aside>
 </div>
