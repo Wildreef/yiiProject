@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+
 /** @var yii\web\View $this */
 /** @var app\models\Article $model */
 /** @var yii\widgets\ActiveForm $form */
@@ -24,9 +25,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'viewed')->textInput() ?>
 
-    <?= $form->field($model, 'topic_id')->textInput() ?>
+    <?= $form->field($model, 'topic_id')->dropDownList($topics) ?>
 
-    <?= $form->field($model, 'user_id')->textInput() ?>
+    <?= $form->field($model, 'user_id')->dropDownList($users) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
