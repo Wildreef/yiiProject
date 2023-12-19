@@ -16,6 +16,7 @@
                 </div>
             <?php endforeach; ?>
         </aside>
+
         <aside class="widget pos-padding">
             <h3 class="widget-title text-uppercase text-center">Recent Posts</h3>
             <?php foreach ($recent as $article): ?>
