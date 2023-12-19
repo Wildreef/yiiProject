@@ -8,7 +8,7 @@ use yii\helpers\Url;
 
         <div class="post-thumb">
 
-            <a href="blog.html"><img src="" alt=" image "></a>
+            <a href="blog.html"> <img src="<?= $article->getImage() ?>" alt=" image"></a>
 
         </div>
 
@@ -18,29 +18,36 @@ use yii\helpers\Url;
 
                 <h6>
 
-                    <a href=""> Travel </a>
+                    <a href="<?= Url::toRoute(['/topic', 'id' => $article->topic->id]) ?>"> <?= $article->topic->name; ?></a>
 
                 </h6>
 
-                <h1 class="entry-title"><a href="blog.html"> Home is peaceful place </a></h1>
+                <h1 class="entry-title"><a href="# <a href="blog.html"><?= $article->title; ?></a> "><?= $article->title; ?></a></h1>
 
             </header>
 
             <div class="entry-content">
 
-                Text.
+                <?= $article->description; ?>
 
             </div>
 
             <div class="decoration">
 
-                <a href="" class="btn btn-default">Tag</a>
+                <?php foreach (preg_split("/[\s,]+/", $article->tag) as $tag): ?>
+
+                    <a href="/search?SearchForm[text]=<?= str_replace('#', '', $tag) ?>"
+
+                       class="btn btn-default"><?= $tag ?></a>
+
+                <?php endforeach; ?>
 
             </div>
 
             <div class="social-share">
 
-                <span class="social-share-title pull-left text-capitalize">By Stas On 20-02-12</span>
+                <span class="social-share-title pull-left text-capitalize">By <?= $article->user->name; ?> On <?= $article->getDate(); ?>
+                </span>
 
                 <ul class="text-center pull-right">
 

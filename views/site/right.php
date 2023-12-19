@@ -45,7 +45,7 @@
 
                     <li>
 
-                        <a href="<?= Url::toRoute(['/topic', 'id' => $topic->id]) ?>"><?= $topic->name; ?></a>
+                        <a href="<?= Url::toRoute(['/topic', 'id' => $article->topic->id]) ?>"><?= $topic->name; ?></a>
 
                         <span class="post-count pull-right"> (<?= $topic->getArticles()->count(); ?>)</span>
 
