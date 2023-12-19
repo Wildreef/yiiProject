@@ -1,4 +1,6 @@
-<?php use yii\helpers\Url; ?>
+<?php use yii\helpers\Url;
+
+?>
 <div class="col-md-4" data-sticky_column>
     <div class="primary-sidebar">
         <aside class="widget">
