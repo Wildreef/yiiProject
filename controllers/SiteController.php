@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Article;
+use app\models\Topic;
 
 use yii\data\Pagination;
 
@@ -69,6 +70,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
+        $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
+
+        $recent = Article::find()->orderBy('date desc')->limit(3)->all();
+
+        $topics = Topic::find()->all();
         // build a DB query to get all articles
 
         $query = Article::find();
@@ -93,9 +100,16 @@ class SiteController extends Controller
 
             'articles'=>$articles,
 
-            'pagination'=>$pagination
+            'pagination'=>$pagination,
+
+            'popular' => $popular,
+
+            'recent' => $recent,
+
+            'topics' => $topics
 
         ]);
+
     }
 
     /**
