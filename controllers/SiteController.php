@@ -26,6 +26,8 @@ class SiteController extends Controller
 
         $article = Article::findOne($id);
 
+        $article->viewedCounter();
+
         $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
 
         $recent = Article::find()->orderBy('date desc')->limit(3)->all();
