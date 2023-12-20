@@ -1,8 +1,12 @@
 <?php
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
 ?>
-
+    <div class="topclass">
+        <img src="mainpageimg2.png">
+    </div>
 <div class="col-md-8">
+
     <?php foreach ($articles as $article): ?>
         <article class="post">
 
@@ -18,7 +22,7 @@ use yii\helpers\Url;
 
                     <h6><a href=""> <?= $article->topic->name; ?></a></h6>
 
-                    <h1 class="entry-title"><a href=""> <?= $article->title; ?> </a></h1>
+                    <h1 class="entry-title"><a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>"> <?= $article->title; ?> </a></h1>
 
                 </header>
 
@@ -26,9 +30,9 @@ use yii\helpers\Url;
 
                     <p> <?= mb_strimwidth($article->description,0, 360, "..."); ?> </p>
 
-                    <div class="btn-continue-reading text-center text-uppercase">
+                    <div class="continue_reading_bnt Right">
 
-                        <a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>" class="more-link">Continue Reading</a>
+                        <a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>" class="more-link">Читати далі</a>
 
                     </div>
 

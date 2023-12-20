@@ -22,7 +22,7 @@ use yii\helpers\Url;
 
                 </h6>
 
-                <h1 class="entry-title"><a href="# <a href="blog.html"><?= $article->title; ?></a> "><?= $article->title; ?></a></h1>
+                <h1 class="entry-title"><a href="# <a href="blog.html"><?= $article->title; ?></a></h1>
 
             </header>
 
@@ -38,7 +38,7 @@ use yii\helpers\Url;
 
                     <a href="/search?SearchForm[text]=<?= str_replace('#', '', $tag) ?>"
 
-                       class="btn btn-default"><?= $tag ?></a>
+                       class="btn btn-default text-light"><?= $tag ?></a>
 
                 <?php endforeach; ?>
 
@@ -144,7 +144,7 @@ use yii\helpers\Url;
 
                                         <?php if (!Yii::$app->user->isGuest): ?>
 
-                                            <button class="replay btn pull-right" onclick="ShowReplay(this)"> Replay
+                                            <button class="replay btn pull-right text-light" onclick="ShowReplay(this)"> Replay
 
                                             </button>
 
@@ -176,9 +176,11 @@ use yii\helpers\Url;
 
                                         <div class="comment-delete">
 
-                                            <button type="submit">
+                                            <button type="submit" class="bg-dark border-0">
 
-                                                <i class="fa fa-trash"></i>
+
+
+                                                <img width="40" height="40" src="deletes.png">
 
                                             </button>
 
@@ -318,9 +320,11 @@ use yii\helpers\Url;
 
                                                         <div class="comment-delete">
 
-                                                            <button type="submit">
+                                                            <button type="submit" class="bg-dark border-0">
 
-                                                                <i class="fa fa-trash"></i>
+
+
+                                                                <img width="40" height="40" src="deletes.png">
 
                                                             </button>
 

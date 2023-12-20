@@ -4,7 +4,7 @@
 <div class="col-md-4" data-sticky_column>
     <div class="primary-sidebar">
         <aside class="widget">
-            <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
+            <h3 class="widget-title text-uppercase text-center">Популярні публікації</h3>
             <?php foreach ($popular as $article): ?>
                 <div class="popular-post">
                     <a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>" class="popular-img">
@@ -20,7 +20,7 @@
         </aside>
 
         <aside class="widget pos-padding">
-            <h3 class="widget-title text-uppercase text-center">Recent Posts</h3>
+            <h3 class="widget-title text-uppercase text-center">Нещодавні публікації</h3>
             <?php foreach ($recent as $article): ?>
                 <div class="thumb-latest-posts">
                     <div class="media">
@@ -38,9 +38,9 @@
                 </div>
             <?php endforeach; ?>
         </aside>
-        <aside class="widget border pos-padding">
+        <aside class="widget pos-padding">
 
-            <h3 class="widget-title text-uppercase text-center">Categories</h3>
+            <h3 class="widget-title text-uppercase text-center">Категорії</h3>
 
             <ul>
 
@@ -48,7 +48,7 @@
 
                     <li>
 
-                        <a href="<?= Url::toRoute(['/topic', 'id' => $article->topic->id]) ?>"><?= $topic->name; ?></a>
+                        <a href="<?= Url::toRoute(['/topic', 'id' => $topic->id]) ?>"><?= $topic->name; ?></a>
 
                         <span class="post-count pull-right"> (<?= $topic->getArticles()->count(); ?>)</span>
 
@@ -61,7 +61,7 @@
         </aside>
     </div>
 
-    <aside class="border pos-padding widget-search">
+    <aside class="pos-padding widget-search">
 
         <?php $form = \yii\widgets\ActiveForm::begin([
 
@@ -73,7 +73,7 @@
 
         <?php $searchForm = new \app\models\SearchForm() ?>
 
-        <?= $form->field($searchForm, 'text')->textInput(['class' => 'form-control serch', 'placeholder' => 'Search'])->label(false) ?>
+        <?= $form->field($searchForm, 'text')->textInput(['class' => 'form-control serch', 'placeholder' => 'Пошук за тегом'])->label(false) ?>
 
         <button class="btn-serch" type="submit"><i class="fa fa-search"></i></button>
 

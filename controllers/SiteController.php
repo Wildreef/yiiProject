@@ -15,7 +15,7 @@ use app\models\Comment;
 use app\models\SearchForm;
 use app\models\CommentForm;
 use yii\data\Pagination;
-
+use yii\widgets\LinkPager;
 class SiteController extends Controller
 {
     public function actionSearch()
@@ -118,7 +118,7 @@ class SiteController extends Controller
 
         // create a pagination object with the total count
 
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 1]);
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 6]);
 
 
         // limit the query using the pagination and retrieve the articles
@@ -198,46 +198,25 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-
         $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
-
         $recent = Article::find()->orderBy('date desc')->limit(3)->all();
-
         $topics = Topic::find()->all();
-        // build a DB query to get all articles
 
         $query = Article::find();
-
-// get the total number of articles (but do not fetch the article data yet)
-
         $count = $query->count();
 
-// create a pagination object with the total count
-
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=> 1]);
-
-// limit the query using the pagination and retrieve the articles
-
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 3]);
         $articles = $query->offset($pagination->offset)
-
             ->limit($pagination->limit)
-
             ->all();
 
-        return $this->render('index',[
-
-            'articles'=>$articles,
-
-            'pagination'=>$pagination,
-
+        return $this->render('index', [
+            'articles' => $articles,
+            'pagination' => $pagination,
             'popular' => $popular,
-
             'recent' => $recent,
-
             'topics' => $topics,
-
         ]);
-
     }
 
     /**

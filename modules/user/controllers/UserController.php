@@ -2,12 +2,14 @@
 
 namespace app\modules\user\controllers;
 
+use app\models\ImageUpload;
 use app\models\User;
 use app\models\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * UserController implements the CRUD actions for User model.

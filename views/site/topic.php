@@ -5,7 +5,9 @@ use yii\helpers\Url;
 use yii\widgets\LinkPager;
 
 ?>
-
+    <div class="topclass">
+        <img src="mainpageimg2.png">
+    </div>
     <div class="col-md-8">
 
         <?php foreach ($articles as $article): ?>
@@ -15,14 +17,11 @@ use yii\widgets\LinkPager;
                 <div class="row">
 
                     <div class="col-md-6">
-
-                        <div class="post-thumb">
-
+                        <div class="post-thumb-topic">
                             <a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>">
-                                <img class="img-topic" src="<?= $article->getImage() ?>" alt="" class="pull-left"></a>
-
+                                <img class="img-topic" src="<?= $article->getImage() ?>" alt="">
+                            </a>
                         </div>
-
                     </div>
 
                     <div class="col-md-6">
