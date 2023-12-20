@@ -17,7 +17,7 @@ class CommentForm extends Model
     {
 
         return [
-
+            ['comment', 'string', 'max' => 255],
             [['comment'], 'required']
 
         ];

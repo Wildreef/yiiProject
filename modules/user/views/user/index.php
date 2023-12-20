@@ -59,3 +59,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 </div>
+<?php
+
+if (!Yii::$app->user->isGuest) {
+    if (Yii::$app->user->id == 1) {
+
+        echo Html::a('Адмін панель', Url::to(['/admin/default']), ['class' => 'btn btn-primary adminbtngreen']);;
+    } else {
+
+        echo "";
+    }
+
+}
+?>
+<div class="filler1" style="height: 620px"></div>

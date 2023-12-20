@@ -19,3 +19,4 @@ $this->params['breadcrumbs'][] = 'Update';
     ]) ?>
 
 </div>
+<div class="filler1" style="height: 350px"></div>

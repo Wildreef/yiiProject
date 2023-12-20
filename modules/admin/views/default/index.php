@@ -1,12 +1,15 @@
 <div class="admin-default-index">
-    <h1><?= $this->context->action->uniqueId ?></h1>
+    <h1>Головна сторінка адмін панелі</h1>
     <p>
-        This is home page for admin panel "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
+       Для зміни сайту скористайтися меню зверху або натисніть на один з розділів знизу
     </p>
     <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
+    <ul class="uladmin">
+        <li><a href="/admin/article">Articles</a></li>
+        <li><a href="/admin/comment">Comments</a></li>
+        <li><a href="/admin/topic">Topics</a></li>
+        <li><a href="/admin/user">Users</a></li>
+    </ul>
+
     </p>
 </div>

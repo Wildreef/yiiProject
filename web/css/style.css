@@ -351,8 +351,9 @@ body .comment-top {
     color: whitesmoke;
     display: flex;
 
+/*
     justify-content: space-between;
-
+*/
 }
 
 body .comment-date {
@@ -365,7 +366,7 @@ body .comment-date {
 body .comment-text {
 
     word-break: break-word;
-
+    width: 90%;
     padding-right: 10px;
 
 }
@@ -437,8 +438,11 @@ i.fa.fa-trash {
 }
 
 .comment-delete {
-
-    float: right;
+    margin-left: 12px;
+    margin-bottom: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 
 }
 
@@ -721,3 +725,154 @@ widget ul {
     white-space: normal;
 }
 
+.user-update{
+    color: white;
+}
+
+.admin-article-index body {
+    color: white;
+
+}
+
+.user-create{
+    color: white;
+}
+
+.article-form{
+    color: white;
+}
+
+.article-index{
+    color: white;
+}
+
+.article-create{
+    color: white;
+}
+
+.article-view table.table tbody {
+    color: white;
+    white-space: normal;
+}
+
+.article-view table.table td {
+    color: white;
+    white-space: normal;
+}
+
+.article-view table.table th {
+    color: white;
+    white-space: normal;
+}
+
+.article-view{
+    color: white;
+}
+
+.article-update{
+    color: white;
+}
+
+.comment-index{
+    color: white;
+}
+
+.comment-create{
+    color: white;
+}
+
+.comment-view{
+    color: white;
+}
+
+.comment-view table.table tbody {
+    color: white;
+    white-space: normal;
+}
+
+.comment-view table.table td {
+    color: white;
+    white-space: normal;
+}
+
+.comment-view table.table th {
+    color: white;
+    white-space: normal;
+}
+
+.comment-update{
+    color: white;
+}
+
+.topic-index{
+    color: white;
+}
+
+.topic-view table.table tbody {
+    color: white;
+    white-space: normal;
+}
+
+.topic-view table.table td {
+    color: white;
+    white-space: normal;
+}
+
+.topic-view table.table th {
+    color: white;
+    white-space: normal;
+}
+
+.topic-view{
+    color: white;
+}
+
+.topic-update{
+    color: white;
+}
+
+.admin-default-index{
+    color: white;
+}
+
+.uladmin a {
+    color: white;
+    font-size: 20px;
+}
+
+.adminbtngreen{
+    background: #35c471;
+    border: 1px solid #35c471;
+}
+
+.adminbtngreen:hover{
+    background: #35c471;
+    border: 1px solid #35c471;
+}
+
+.yii-debug-toolbar {
+    display: none !important;
+}
+
+.repll{
+    height: 20px;
+    width: 100px;
+
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+
+
+}
+
+.butn_repl{
+    margin-top: 2px;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    font-size: 14px;
+    background: #35c471;
+    height: 20px;
+    color: white;
+    border: 0;
+    border-radius: 25px;
+}

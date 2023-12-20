@@ -7,7 +7,9 @@ use yii\widgets\LinkPager;
     </div>
 <div class="col-md-8">
 
-    <?php foreach ($articles as $article): ?>
+    <?php
+
+    foreach ($articles as $article): ?>
         <article class="post">
 
             <div class="post-thumb">
@@ -20,7 +22,7 @@ use yii\widgets\LinkPager;
 
                 <header class="entry-header text-center text-uppercase">
 
-                    <h6><a href=""> <?= $article->topic->name; ?></a></h6>
+                    <h6><a href="<?= Url::toRoute(['/topic', 'id' => $article->topic->id]) ?>"> <?= $article->topic->name; ?></a></h6>
 
                     <h1 class="entry-title"><a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>"> <?= $article->title; ?> </a></h1>
 

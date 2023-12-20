@@ -37,14 +37,15 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top ']
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav '],
+        'options' => ['class' => 'navbar-nav navbar-right ms-auto '],
         'items' => [
             ['label' => 'Головна', 'url' => ['/site/index']],
             ['label' => 'Про нас', 'url' => ['/site/about']],
             ['label' => 'Контакти', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest
-                ? '' // Пустая строка для гостей
+                ? ''
                 : ['label' => 'Профіль', 'url' => ['/user/user']],
+
             Yii::$app->user->isGuest
                 ? ['label' => 'Увійти', 'url' => ['/auth/login']]
 

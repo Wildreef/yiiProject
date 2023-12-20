@@ -202,7 +202,7 @@ class SiteController extends Controller
         $recent = Article::find()->orderBy('date desc')->limit(3)->all();
         $topics = Topic::find()->all();
 
-        $query = Article::find();
+        $query = Article::find()->orderBy(['id' => SORT_DESC]);
         $count = $query->count();
 
         $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 3]);

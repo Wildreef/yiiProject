@@ -91,7 +91,7 @@ use yii\helpers\Url;
 
             <div class="leave-comment"><!--leave comment-->
 
-                <h4>Leave a reply</h4>
+                <h4>Залишити коментар</h4>
 
                 <form class="form-horizontal contact-form" role="form" method="post" action="#">
 
@@ -100,13 +100,13 @@ use yii\helpers\Url;
                         <div class="col-md-12">
 
                             <?= $form->field($commentForm, 'comment')->textarea(['class' => 'form-control',
-                                'placeholder' => 'Write Message'])->label(false) ?>
+                                'placeholder' => 'Write Message', 'maxlength' => true,'style' => 'resize: none;',])->label(false) ?>
 
                         </div>
 
                     </div>
 
-                    <button type="submit" class="btn send-btn">Post Comment</button>
+                    <button type="submit" class="btn send-btn">Відправити</button>
 
                     <?php \yii\widgets\ActiveForm::end() ?>
 
@@ -132,7 +132,7 @@ use yii\helpers\Url;
 
                             <div class="comment">
 
-                                <a href="#" class="comment-img">
+                                <a href="/user/user" class="comment-img">
 
                                     <img class="img-round" src="<?= $comment->user->getImage(); ?>" alt="">
 
@@ -141,23 +141,20 @@ use yii\helpers\Url;
                                 <div class="comment-body">
 
                                     <div class="comment-top">
+                                        <h5 style="margin-right: 10px; font-size: 16px; margin-top: 3px"><?= $comment->user->name; ?></h5>
 
-                                        <?php if (!Yii::$app->user->isGuest): ?>
 
-                                            <button class="replay btn pull-right text-light" onclick="ShowReplay(this)"> Replay
 
-                                            </button>
 
-                                        <?php endif; ?>
-
-                                        <h5><?= $comment->user->name; ?></h5>
-
-                                        <p class="comment-date">
+                                        <p class="comment-date" style="color: #33c46d; margin-right: 10px">
 
                                             <?= $comment->getDate(); ?>
 
                                         </p>
-
+                                        <?php if (!Yii::$app->user->isGuest): ?>
+                                            <button class="butn_repl" onclick="ShowReplay(this)"> Відповісти
+                                            </button>
+                                        <?php endif; ?>
                                     </div>
 
                                     <div class="comment-text">
@@ -165,6 +162,8 @@ use yii\helpers\Url;
                                         <?= $comment->text; ?>
 
                                     </div>
+
+
 
                                     <?php if ($comment->user_id == Yii::$app->user->id): ?>
 
@@ -198,9 +197,9 @@ use yii\helpers\Url;
 
                             <?php if (is_int(array_search($comment->id, array_column($commentsChild, 'comment_id')))): ?>
 
-                                <div class="comment">
+                                <div class="comment" >
 
-                                    <a href="#" class="comment-img">
+                                    <a href="/user/user" class="comment-img" >
 
                                         <img class="img-round" src="<?= $comment->user->getImage(); ?>" alt="">
 
@@ -210,9 +209,9 @@ use yii\helpers\Url;
 
                                         <div class="comment-top">
 
-                                            <h5><?= $comment->user->name; ?></h5>
+                                            <h5 style="margin-right: 10px; font-size: 16px; margin-top: 3px"><?= $comment->user->name; ?></h5>
 
-                                            <p class="comment-date">
+                                            <p class="comment-date" style="color: #33c46d; margin-right: 10px">
 
                                                 <?= $comment->getDate(); ?>
 
@@ -279,9 +278,9 @@ use yii\helpers\Url;
 
                                         <div class="comment-block">
 
-                                            <div class="comment">
+                                            <div class="comment" style="margin-bottom: 10px">
 
-                                                <a href="#" class="comment-img">
+                                                <a href="/user/user" class="comment-img">
 
                                                     <img class="img-round" src="<?= $commentChild->user->getImage(); ?>"
 
@@ -293,9 +292,9 @@ use yii\helpers\Url;
 
                                                     <div class="comment-top">
 
-                                                        <h5><?= $commentChild->user->name; ?></h5>
+                                                        <h5 style="margin-right: 10px; font-size: 16px; margin-top: 3px"> <?= $commentChild->user->name; ?></h5>
 
-                                                        <p class="comment-date">
+                                                        <p class="comment-date" style="color: #33c46d; margin-right: 10px">
 
                                                             <?= $commentChild->getDate(); ?>
 

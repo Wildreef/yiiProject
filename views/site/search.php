@@ -10,7 +10,7 @@ use yii\widgets\LinkPager;
 
         <div style="text-align: center" >
 
-            <h2>Search by tag (<?= $search ?>)</h2>
+            <h2 style="color: white">Пошук за тегом: <?= $search ?></h2>
 
         </div>
 
@@ -40,9 +40,9 @@ use yii\widgets\LinkPager;
 
                         </p>
 
-                        <div class="btn-continue-reading text-center text-uppercase">
+                        <div class="continue_reading_bnt Right">
 
-                            <a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>" class="more-link">Continue Reading</a>
+                            <a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>" class="more-link">Читати далі</a>
 
                         </div>
 
