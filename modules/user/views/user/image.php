@@ -22,3 +22,4 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+<div class="filler1" style="height: 670px"></div>

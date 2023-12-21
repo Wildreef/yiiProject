@@ -31,13 +31,13 @@ use yii\widgets\LinkPager;
                 <div class="entry-content">
 
                     <p> <?= mb_strimwidth($article->description,0, 360, "..."); ?> </p>
-
+                    <a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>" class="more-link">
                     <div class="continue_reading_bnt Right">
 
-                        <a href="<?= Url::toRoute(['/view', 'id'=>$article->id]) ?>" class="more-link">Читати далі</a>
+                       Читати далі
 
                     </div>
-
+                    </a>
                 </div>
 
                 <div class="social-share">

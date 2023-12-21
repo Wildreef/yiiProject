@@ -841,6 +841,7 @@ widget ul {
 }
 
 .adminbtngreen{
+    margin-top: 15px;
     background: #35c471;
     border: 1px solid #35c471;
 }
@@ -875,4 +876,73 @@ widget ul {
     color: white;
     border: 0;
     border-radius: 25px;
+}
+
+.single-entry-content {
+    overflow: auto;
+    max-width: 100%;
+}
+
+.site-login{
+    color: white;
+
+}
+
+.site-about{
+    color: white;
+}
+
+.site-contact{
+    color: white;
+}
+
+.user-main-blick{
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.user-main-block{
+    width: 100%;
+    height: 400px;
+    background: #151617;
+    display: flex;
+    color: white;
+    flex-direction: row;
+}
+
+.user-main-block-img{
+    width: 20%;
+    height: 100%;
+
+    min-width: 200px;
+}
+
+.user-main-block-info{
+    min-width: 250px;
+    padding-top: 10px;
+    width: 40%;
+    height: 100%;
+
+
+}
+
+.change_img_new_btn{
+    border: 1px solid #37c474;
+    margin-top: 15px;
+    padding: 5px;
+    background: #37c474;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+.change_img_new_btn:hover{
+    color: white;
+    border: 1px solid #37c474;
+    background: #37c474;
 }

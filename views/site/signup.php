@@ -10,7 +10,7 @@ use yii\helpers\Html;
 
 use yii\bootstrap5\ActiveForm;
 
-$this->title = 'Signup';
+$this->title = 'Реєстрація';
 
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -36,17 +36,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
     ]); ?>
 
-    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+    <?= $form->field($model, 'name')->textInput(['autofocus' => true])->label("Ім'я") ?>
 
-    <?= $form->field($model, 'login')->textInput() ?>
+    <?= $form->field($model, 'login')->textInput()->label("Логін") ?>
 
-    <?= $form->field($model, 'password')->passwordInput() ?>
+    <?= $form->field($model, 'password')->passwordInput()->label("Пароль") ?>
 
     <div class="form-group">
 
         <div class="col-lg-offset-1 col-lg-11">
 
-            <?= Html::submitButton(' Signup ', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+            <?= Html::submitButton(' Зареєструватися ', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
 
         </div>
 
@@ -55,3 +55,5 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<div class="filler1" style="height: 500px"></div>

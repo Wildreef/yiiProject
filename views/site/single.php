@@ -28,7 +28,7 @@ use yii\helpers\Url;
 
             <div class="entry-content">
 
-                <?= $article->description; ?>
+                <?= nl2br($article->description); ?>
 
             </div>
 

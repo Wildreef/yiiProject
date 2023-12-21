@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About';
+$this->title = 'Про нас';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -10,10 +10,18 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>This is the About page. You can add your description here.</p>
+    <p>На нашому відмінному кіноблозі завжди відбувається щось цікаве та захоплююче! Ми створили цей сайт для тих, хто обожнює світ кіно та хоче дізнатися про найсвіжіші новини, рецензії на найочікуваніші стрічки, а також приєднатися до спільноти справжніх кіноманів. Наша мета — поділитися страстю до кіно та створити місце, де кожен знайде щось цікаве для себе.<br><br>
+        Ми вже працюємо протягом довгого часу, і кожен день розширюємо наш контент та покращуємо функціонал сайту. За цей час ми встигли створити обширний каталог рецензій на різні жанри та напрямки кіношедеврів. Наші автори — це професіонали своєї справи, готові поділитися своїми враженнями та рекомендаціями з вами. Ми віримо, що кожен фільм — це унікальний світ, який варто відкривати та обговорювати.<br><br>
+        На нашому сайті ви не лише знайдете інформацію про найновіші кінострічки, але й зможете взяти участь у власних обговореннях, виражаючи свої думки та обмінюючись враженнями з іншими кінофілами. Це місце, де створюється спільнота, що ділиться любов'ю до магії кіно. Приєднуйтесь до нас, долучайтеся до обговорень та насолоджуйтеся світом неповторного і мистецького кінематографу разом з нами!<br><br>
+        <br>
+        Наші соціальні мережі:
+    </p>
+
 
     <p>
-        <?= Html::a(Html::img('URL_TO_YOUTUBE_IMAGE', ['alt' => 'YouTube', 'class' => 'social-icon']), 'https://www.youtube.com/channel/YOUR_CHANNEL_ID', ['target' => '_blank', 'class' => 'btn btn-success']) ?>
-        <?= Html::a(Html::img('URL_TO_TELEGRAM_IMAGE', ['alt' => 'Telegram', 'class' => 'social-icon']), 'https://t.me/YOUR_TELEGRAM_CHANNEL', ['target' => '_blank', 'class' => 'btn btn-primary']) ?>
+        <a href=""><img src="/telegram.png" width="40px" height="40px" alt="Telegram" style="margin-left: 5px"></a>
+       <a  href=""><img src="/youtube.png" width="50px" height="50px" alt="Telegram" ></a>
     </p>
 </div>
+
+<div class="filler1" style="height: 270px"></div>
